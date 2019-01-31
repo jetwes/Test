@@ -1,0 +1,52 @@
+{
+    "name": "jetwes/test",
+    "description": "",
+    "keywords": [
+        "jetwes",
+        "test"
+    ],
+    "homepage": "https://github.com/jetwes/test",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jens Twesmann",
+            "email": "j.twesmann@star-media.biz",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1"
+    },
+    "require-dev": {
+        "illuminate/support": "5.7.*",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jetwes\\Test\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Jetwes\\Test\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Jetwes\\Test\\TestServiceProvider"
+            ],
+            "aliases": {
+                "Skeleton": "Jetwes\Test\\TestFacade"
+            }
+        }
+    }
+}
